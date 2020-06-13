@@ -4,7 +4,10 @@ LD = ld
 AFLAGS = -f elf32 -ggdb
 LFLAGS = -melf_i386 -nostdlib -T linker.ld
 
-teta-asm.elf: linker.ld teta-asm.o video.o
+SOURCES = $(wildcard *.asm)
+OBJECTS = $(SOURCES:%.asm=%.o)
+
+teta-asm.elf: linker.ld $(OBJECTS)
 	$(LD) $(LFLAGS) $^ -o $@
 
 %.o: %.asm
