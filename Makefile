@@ -4,7 +4,7 @@ LD = ld
 AFLAGS = -f elf32 -ggdb
 LFLAGS = -melf_i386 -nostdlib -T linker.ld
 
-SOURCES = $(wildcard *.asm)
+SOURCES = $(wildcard src/*.asm)
 OBJECTS = $(SOURCES:%.asm=%.o)
 
 teta-asm.elf: linker.ld $(OBJECTS)
@@ -14,7 +14,7 @@ teta-asm.elf: linker.ld $(OBJECTS)
 	$(NASM) $(AFLAGS) $^ -o $@
 
 clean:
-	rm -rf teta-asm.elf teta-asm.o
+	rm -rf teta-asm.elf $(OBJECTS)
 
 QEMU = qemu-system-i386
 QFLAGS =
