@@ -25,8 +25,7 @@ info db 'Tetrasm https://github.com/jihed-garaouch/teta-asm', 0
 
 section .text
 
-extern draw
-extern puts
+extern draw, puts
 
 ; about_draw()
 ; Draw title and info.
