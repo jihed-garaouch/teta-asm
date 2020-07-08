@@ -2,3 +2,4 @@
 *.elf
 iso
 teta-asm.iso
+config.mk
