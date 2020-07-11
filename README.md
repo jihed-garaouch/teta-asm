@@ -18,6 +18,12 @@ Somewhat a port from C of
 - Lock delay with limited movement
 - Pause
 
+## Binaries
+
+ELF binaries and ISO images can be downloaded on the [releases][releases] page.
+
+[releases]: https://github.com/jihed-garaouch/teta-asm/releases
+
 ## Dependencies
 
 - [NASM][nasm], with support for `elf32` output format
