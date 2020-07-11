@@ -1,5 +1,5 @@
 *.o
 *.elf
+*.iso
 iso
-teta-asm.iso
 config.mk
