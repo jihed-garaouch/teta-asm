@@ -76,13 +76,14 @@ This will create a bootable ISO using GRUB Legacy, `teta-asm.iso`.
 ## Emulation
 
 ```
-make qemu
+make qemu BUILD=release
 ```
 
 This will boot `teta-asm.elf` in QEMU using multiboot.
+If run in the debug build, waits for a debugger to attach.
 
 ```
-make qemu-iso
+make qemu-iso BUILD=release
 ```
 
 This will boot `teta-asm.iso` in QEMU.
